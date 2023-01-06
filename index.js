@@ -29,34 +29,71 @@
 // };
 // console.log(output);
 
-var words = [
-    "программа",
-    "макака",
-    "прекрасный",
-    "оладушек"
-];
-var word = words[Math.floor(Math.random() * words.length)];
-var answerArray = [];
-for (var i = 0; i < word.length; i++) {
-    answerArray[i] = "_";
-}
-var remainingLetters = word.length;
-alert(answerArray.join(" "));
+// if (word[j] !== guess) {
+//     attempts--;
+// }
+// if ( attempts < 1) {
+//     alert("Game over!");
+//     break;
+// }
 
 
-while ( var guess = prompt("Угадайте букву или нажмите Отмена для выхода из игры.") ) {
-    if (guess === null) {
-    break;
-}
-    else if (guess.length !== 1) {
-    alert("Пожалуйста, введите только одну букву.");
-} else {
-    for (var j = 0; j < word.length; j++) {
-             if (word[j] === guess) {
-            answerArray[j] = guess;
-             remainingLetters--;
-        }
-    }
+// <!-- <script>
+// var words = [
+//     "макака",
+//     "девушка",
+//     "паладин",
+//     "подушка",
+//     "телевизор"
+// ];
+// var word = words[Math.floor(Math.random() * words.length)];
+// var attempts = 5;
 
-}
-}
+// var answerArray = [];
+// for (var i = 0; i < word.length; i++) {
+//     answerArray[i] = "_";
+// }
+// var remainingLetters = word.length;
+
+// while (remainingLetters > 0 && attempts-- > 0) {
+//     alert(answerArray.join(" "));
+//     var guess = prompt("Угадайте букву или нажмите Отмена для выхода из игры.");
+//     guess.toLowerCase;
+//     if (guess === null) {
+//         break;
+//     } else if (guess.length !== 1) {
+//         alert("You are stupid ?")
+//     }
+//     else  {
+//         for (var j = 0; j < word.length; j++) {
+//             if (word[j] === guess) {
+//                 answerArray[j] = guess;
+//                 remainingLetters--;
+//             }
+//         }
+//     }
+// }
+// alert(answerArray.join(" "));
+// alert("Отлично! Было загадано слово " + word);
+
+
+// var add = function(a,b) {
+//     c = a + b;
+//     return c;
+// };
+// var multiply = function(a,b) {
+//     c = a * b;
+//     return c;
+// };
+
+// var result = add(multiply(36325, 9824),777);
+
+// var areArraysSame = function(argument1,argument2) {
+// for(i = 0; i < argument1.length; i++) {
+//     if(argument1[i] !== argument2[i] || argument1.length !== argument2.length) {
+//         return false;
+//     }
+// }
+// return true
+// };
+// </script> -->
