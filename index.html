@@ -8,7 +8,7 @@
 
 <body>
     <h1 id="heading">Найди клад!</h1>
-    <img id="map" width=400 height=400 src="http://nostarch.com/images/treasuremap.png">
+    <img id="map" width=800 height=800 src="http://nostarch.com/images/treasuremap.png">
     <p id="distance"></p>
     <script src="https://code.jquery.com/jquery-3.6.3.js"
         integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
@@ -38,13 +38,19 @@
                 return "Холодно";
             } else if (distance < 320) {
                 return "Очень холодно";
-            } else {
+            } else if (distance < 400) { 
                 return "Замерзнешь!";
+            }
+            else if (distance < 500) {
+                return "На тебя напал ледяной троль !"
+            }
+            else {
+                return "У тебя больше нет пальцев на ногах !!!"
             }
         };
         // Создаем переменные
-        var width = 400;
-        var height = 400;
+        var width = 800;
+        var height = 800;
         var clicks = 0;
         // Случайная позиция клада
         var target = {
@@ -64,6 +70,10 @@
             if (distance < 8) {
                 alert("Клад найден! Сделано кликов: " + clicks);
             }
+            if (clicks  > 20) {
+                alert("Лимит кликов превышен! Игра окончена!")
+            }
+            
         });
     </script>
 </body>
